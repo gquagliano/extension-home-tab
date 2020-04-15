@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home Tab Settings</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-size: .9em;
+            }
+            .cuerpo {
+                max-width: 90%;
+                padding: 40px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                box-shadow: 0 1px 5px rgba(0,0,0,.2), 0 9px 27px rgba(0,0,0,.2);
+                border-radius: 3px;
+                width: 840px;
+            }
+            h1 {
+                margin-top: 0;
+                margin-bottom: 2rem;
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+            h1 img {
+                vertical-align: -42%;
+                margin-right: .5rem;
+            }
+            .fila {
+                display: flex;
+                margin-bottom: 1.5rem;
+            }
+            .opciones {
+                text-align: center;
+            }
+            .fila label {
+                flex: 1;
+                white-space: nowrap;
+                padding-right: 1.5rem;
+            }
+            .fila .nombre-campo {
+                flex: 0 0 10rem;
+            }
+            .fila input[type=text] {
+                flex: 6;
+                display: block;
+                width: 100%;
+            }
+            .fila input[type=radio] {
+                margin: 0;
+                vertical-align: bottom;
+                margin-top: 0;
+                margin-bottom: .12rem;
+                margin-right: .2rem;
+            }
+            .fila .relleno {
+                flex: 6;
+            }
+            .firma {
+                text-decoration: none;
+                color: #2c85d2;
+                float: right;   
+            }
+        </style>
+        <script src="configuracion.js"></script>
+    </head>
+    <body>
+        <div class="cuerpo">
+            <h1>
+                <img src="iconos/icono_48.png">
+                Home Tab Settings
+            </h1>
+
+            <div class="fila">
+                <label class="nombre-campo">Home Page:</label>
+                <label><input type="radio" id="habilitar-no" name="habilitar"> Speed Dial</label>
+                <label><input type="radio" id="habilitar-si" name="habilitar"> URL:</label>
+                <input type="text" id="url">
+            </div>
+
+            <div class="fila">
+                <label class="nombre-campo">Replace Speed Dial:</label>
+                <label><input type="radio" id="reemplazar-si" name="reemplazar"> Yes</label>
+                <label><input type="radio" id="reemplazar-no" name="reemplazar"> No</label>
+                <label class="relleno"></label>
+            </div>
+
+            <div class="opciones">
+                <button type="button" id="btn-ok">Ok</button>
+                <a href="https://foxtrot.ar" class="firma">foxtrot.ar</a>
+            </div>
+        </div>
+    </body>
+</html>
